@@ -1,2 +1,2 @@
-# sequelizedBurger
-Eat Da Burger Sequelized
+# Burger
+Burger eat app

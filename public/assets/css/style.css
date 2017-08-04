@@ -1,0 +1,40 @@
+html {
+	background: #f7d278;
+	text-align: center;
+}
+#body {
+  background-color: #f7d278;
+}
+.row {
+	background: #f7d278;
+}
+
+h1 {
+	color: #b52828;
+}
+p {
+	color: #286496;
+}
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f7d278;
+    border-color: #f7d278;
+}

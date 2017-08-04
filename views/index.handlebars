@@ -1,0 +1,83 @@
+
+<img src="http://www.clker.com/cliparts/J/v/l/o/N/w/deluxe-burger-hi.png" alt="burger" style="width: 200px;
+    height: 175px; margin-top: 30px;">
+<h1>Eat Da Burger!</h1>
+
+<div class="row">
+   <div class="col-xs-6">
+        <div id="panel-color" class="panel panel-default">
+          <div id="heading1" class="panel-heading">
+<h2 class="panel-title">Here are your burgers!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <li>
+        {{this.burger_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">DEVOUR!</button>
+        </form>
+
+        
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="col-xs-6">
+        <div id="panel-color" class="panel panel-default">
+          <div id="heading1" class="panel-heading">
+<h2 class="panel-title">Devoured Burgers!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if this.devoured}}
+      <li>
+        {{this.burger_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="false">
+          <button type="submit">Back To The Kitchen!</button>
+        </form>
+
+       
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-xs-12">
+  <div class="panel panel-default">
+  <div id="heading1" class="panel-heading">
+<h2 class="panel-title">Add a Burger</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Burger:</label>
+    <input type="text" id="ca" name="burger_name">
+  </div>
+  <button type="submit">Submit</button>
+</form>
+<p> Enter a burger you want to eat Click the "Submit" button </p>
+
+</div>
+</div>
+</div>
+</div>
